@@ -1,0 +1,69 @@
+let body = document.querySelector("body");
+let score = document.querySelector("#score");
+let display = document.querySelector("#display");
+let box = document.querySelectorAll(".box");
+let startGame = document.querySelector("#startGame");
+
+let array = [
+  "Red",
+  "Green",
+  "Blue",
+  "Pink",
+  "Yellow",
+  "Black",
+  "Orange",
+  "Purple",
+  "White",
+];
+
+let randColor = function random() {
+  return Math.floor(Math.random() * 9);
+};
+
+let idx = randColor();
+let idx2 = randColor();
+
+if (idx === idx2) {
+  idx = randColor();
+  idx2 = randColor();
+}
+
+startGame.addEventListener("click", () => {
+  let disTextColor = array[idx];
+
+  let disColorText = array[idx2];
+
+  display.style.color = disTextColor;
+  display.innerText = disColorText;
+});
+
+let Points = 0;
+
+for (let i = 0; i < box.length; i++) {
+  let clickedBoxColor = box[i].innerText;
+
+  //  console.log(clickedBoxColor);
+  box[i].addEventListener("click", () => {
+    let clickedBoxColor = box[i].innerText;
+
+    if (clickedBoxColor != display.innerText) {
+      display.innerText = "Game Over";
+      alert("Game over!!");
+    } else {
+      idx = randColor();
+      idx2 = randColor();
+      disColor = array[idx];
+
+      disColor2 = array[idx2];
+
+      display.style.color = disColor2;
+      display.innerText = disColor;
+      console.log("okk");
+
+      Points = Points + 1;
+
+      score.innerText = Points;
+      //   console.log(Points);
+    }
+  });
+}
