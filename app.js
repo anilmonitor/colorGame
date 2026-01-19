@@ -29,9 +29,9 @@ if (idx === idx2) {
 }
 let Points = 0;
 startGame.addEventListener("click", () => {
-score.innerText = 0;
-Points = 0;
-score.style.display = "inline";
+  score.innerText = 0;
+  Points = 0;
+  score.style.display = "inline";
   let disTextColor = array[idx];
 
   let disColorText = array[idx2];
@@ -39,8 +39,6 @@ score.style.display = "inline";
   display.style.color = disTextColor;
   display.innerText = disColorText;
 });
-
-
 
 for (let i = 0; i < box.length; i++) {
   //  console.log(clickedBoxColor);
@@ -64,7 +62,6 @@ for (let i = 0; i < box.length; i++) {
       Points = Points + 1;
 
       score.innerText = Points;
-      
     }
   });
 }
