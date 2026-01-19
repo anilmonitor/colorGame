@@ -27,8 +27,11 @@ if (idx === idx2) {
   idx = randColor();
   idx2 = randColor();
 }
-
+let Points = 0;
 startGame.addEventListener("click", () => {
+score.innerText = 0;
+Points = 0;
+score.style.display = "inline";
   let disTextColor = array[idx];
 
   let disColorText = array[idx2];
@@ -37,11 +40,9 @@ startGame.addEventListener("click", () => {
   display.innerText = disColorText;
 });
 
-let Points = 0;
+
 
 for (let i = 0; i < box.length; i++) {
-  let clickedBoxColor = box[i].innerText;
-
   //  console.log(clickedBoxColor);
   box[i].addEventListener("click", () => {
     let clickedBoxColor = box[i].innerText;
@@ -63,7 +64,7 @@ for (let i = 0; i < box.length; i++) {
       Points = Points + 1;
 
       score.innerText = Points;
-      //   console.log(Points);
+      
     }
   });
 }
