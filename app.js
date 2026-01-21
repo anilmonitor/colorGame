@@ -3,6 +3,7 @@ let score = document.querySelector("#score");
 let display = document.querySelector("#display");
 let box = document.querySelectorAll(".box");
 let startGame = document.querySelector("#startGame");
+let tapSound = document.querySelector("#tapSound");
 
 let array = [
   "Red",
