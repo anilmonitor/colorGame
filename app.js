@@ -49,6 +49,7 @@ for (let i = 0; i < box.length; i++) {
     if (clickedBoxColor != display.innerText) {
       display.innerText = "Game Over";
       alert("Game over!!");
+       vibrate(500);
     } else {
       idx = randColor();
       idx2 = randColor();
@@ -70,7 +71,7 @@ for (let i = 0; i < box.length; i++) {
   box[i].addEventListener("click", () => {
     console.log("Sound working");
     play(tapSound);
-     vibrate(500);
+     vibrate(130);
   });
 
 
