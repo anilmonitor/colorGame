@@ -49,7 +49,6 @@ for (let i = 0; i < box.length; i++) {
     if (clickedBoxColor != display.innerText) {
       display.innerText = "Game Over";
       alert("Game over!!");
-       vibrate(500);
     } else {
       idx = randColor();
       idx2 = randColor();
@@ -71,13 +70,13 @@ for (let i = 0; i < box.length; i++) {
   box[i].addEventListener("click", () => {
     console.log("Sound working");
     play(tapSound);
-     vibrate(130);
+    vibrate(130);
   });
 
 
-   
 
-  
+
+
 }
 
 //Function to play sound
@@ -86,7 +85,7 @@ function play(audio) {
   audio.play();
 }
 
- //add vibration function
+//add vibration function
 function vibrate(ms) {
   if (navigator.vibrate) {
     navigator.vibrate(ms);
