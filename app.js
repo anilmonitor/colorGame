@@ -70,11 +70,26 @@ for (let i = 0; i < box.length; i++) {
   box[i].addEventListener("click", () => {
     console.log("Sound working");
     play(tapSound);
+     vibrate(100);
   });
+
+
+   
+
+  
 }
 
 //Function to play sound
 function play(audio) {
   audio.currentTime = 0;
   audio.play();
+}
+
+
+
+
+function vibrate(ms = 100) {
+  if (navigator.vibrate) {
+    navigator.vibrate(ms);
+  }
 }
