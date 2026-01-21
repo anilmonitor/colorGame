@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+   position: relative; 
 }
 
 .cont {
@@ -22,6 +23,7 @@ body {
   box-shadow: 0px 0px 10px #0000001f;
   display: flex;
   flex-direction: column;
+  margin-right: 180px;
 }
 
 #startGame {
@@ -98,4 +100,27 @@ a {
   color: rgb(26, 26, 174);
   font-style: italic;
   letter-spacing: 1px;
+}
+
+
+
+iframe {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+}
+
+/* for mobile  */
+@media (max-width: 768px) {
+  iframe {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .cont {
+    margin-right: 0;
+  }
 }
