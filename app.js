@@ -65,4 +65,16 @@ for (let i = 0; i < box.length; i++) {
       score.innerText = Points;
     }
   });
+
+  //add sound play to all btn 
+  box[i].addEventListener("click", () => {
+    console.log("Sound working");
+    play(tapSound);
+  });
+}
+
+//Function to play sound
+function play(audio) {
+  audio.currentTime = 0;
+  audio.play();
 }
