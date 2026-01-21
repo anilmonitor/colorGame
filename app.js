@@ -4,6 +4,7 @@ let display = document.querySelector("#display");
 let box = document.querySelectorAll(".box");
 let startGame = document.querySelector("#startGame");
 let tapSound = document.querySelector("#tapSound");
+let gameOverAduio = document.querySelector("#gameOverAduio");
 
 let array = [
   "Red",
@@ -48,7 +49,8 @@ for (let i = 0; i < box.length; i++) {
 
     if (clickedBoxColor != display.innerText) {
       display.innerText = "Game Over";
-      alert("Game over!!");
+      play(gameOverAduio);
+      alert("Game over!! 🎮❌");
     } else {
       idx = randColor();
       idx2 = randColor();
